@@ -1,0 +1,144 @@
+
+1. 获取总体分类
+
+http://mobile.ximalaya.com/m/category_tag_menu
+
+2. 获取推荐页面广告
+
+url: http://www.ximalaya.com/mobile/mall/products?device=android
+
+http://www.ximalaya.com/mobile/mall/products
+
+参数	device	android
+
+3. 获取Android专用分类
+
+url: http://mobile.ximalaya.com/m/category_tag_menu?type=user&device=android
+
+http://mobile.ximalaya.com/m/category_tag_menu
+
+参数	type	user
+	device	android
+
+4. 广告1
+
+url: http://ad.ximalaya.com/adrecord/channel?imsi=310260000000000&simSerialNumber=89014103211118510720&androidId=5404bb826a7e225d&device=android&deviceId=0
+
+http://ad.ximalaya.com/adrecord/channel
+	imsi	310260000000000
+	simSerialNumber	89014103211118510720
+	androidId	5404bb826a7e225d
+	device	android
+	deviceId	0
+
+5. 启动分页广告
+
+http://ad.ximalaya.com/ting/loading
+	version	4.1.7
+	name	loading
+	appid	0
+	device	android
+
+5. 顶部广告
+
+http://ad.ximalaya.com/ting
+	version	4.1.7
+	name	comm_top
+	appid	0
+	device	android
+
+6. 应用程序默认配置信息
+
+http://mobile.ximalaya.com/mobile/switch/app_set
+	device	android
+
+7. 网络定位当前位置
+
+http://location.ximalaya.com/locationService/location
+	device	android
+
+8. 搜索框中的广告信息
+
+http://ad.ximalaya.com/ting
+	version	4.1.7.1
+	name	find_banner
+	device	android
+
+9. 猜你喜欢
+
+http://mobile.ximalaya.com/mobile/discovery/v1/recommend/guessYouLike/unlogin
+	pageSize	3
+	pageId	1
+	device	android
+
+10. 发现部分的的栏目
+
+http://mobile.ximalaya.com/mobile/discovery/v1/tabs
+	device	android
+
+11. 发现部分的推荐
+
+http://mobile.ximalaya.com/mobile/discovery/v1/recommends
+	version	4.1.7.1
+	includeActivity	真
+	includeSpecial	真
+	device	android
+	channel	and-f6
+	scale	2
+
+12. 发现部分的分类
+
+http://mobile.ximalaya.com/mobile/discovery/v1/categories
+	picVersion	10
+	device	android
+	scale	2
+
+13. 分类4 发现部分无封面的标签
+
+http://mobile.ximalaya.com/mobile/discovery/v1/category/tagsWithoutCover
+	device	android
+	categoryId	4
+	contentType	album
+
+14. 分类4 下面推荐部分
+
+http://mobile.ximalaya.com/mobile/discovery/v1/category/recommends
+	version	4.1.7.1
+	device	android
+	categoryId	4
+	contentType	album
+
+
+15. 分类4 下面的广告部分
+
+http://ad.ximalaya.com/ting/category
+	version	4.1.7.1
+	device	android
+	category	4
+	scale	2
+
+16. 分类4 下面专辑列表与详情
+
+http://mobile.ximalaya.com/mobile/discovery/v1/category/album
+	status	0
+	pageSize	20
+	pageId	1
+	tagName	从分类来的名字
+	device	android
+	categoryId	4
+	calcDimension	hot
+
+17. 分类4. 专辑 203355 中 第一页共 20条信息的播放列表信息
+
+http://mobile.ximalaya.com/mobile/others/ca/album/track/203355/true/1/20
+	isAsc	真
+	pageSize	20
+	albumId	203355
+	device	android
+
+
+18. 从播放列表中获取的音乐信息，进行播放
+
+http://audio.xmcdn.com/group10/M0A/4E/54/wKgDaVWyfeOyjKsHAHHxVA-ffZo601.m4a
+http://audio.xmcdn.com/group10/M01/49/47/wKgDaVWtJOKiedVXAGZINEBqG64790.m4a
+http://audio.xmcdn.com/group16/M06/4A/D8/wKgDalWuZi7xSOUHAFV7hb3I8KE615.m4a
