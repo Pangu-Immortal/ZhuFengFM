@@ -1,26 +1,28 @@
 package com.zhufengfm.qihao.zhufengfm.tasks;
 
-/**
- * Created by qihao on 2015/7/28.
- */
-
 import android.os.AsyncTask;
 
 /**
- *BaseTask抽象的异步任务
+ * Created by Administrator on 2015/7/28.
  */
-public abstract class BaseTask extends AsyncTask<String,Integer,TaskResult> {
+
+/**
+ * BaseTask 抽象的异步任务
+ */
+public abstract class BaseTask extends AsyncTask<String, Integer, TaskResult> {
+
+
     private TaskCallback callback;
 
-    public BaseTask(TaskCallback callback) {
+    public BaseTask(TaskCallback callback){
         this.callback = callback;
     }
 
+
     @Override
     protected void onPostExecute(TaskResult taskResult) {
-        if (callback!=null){
-            callback.onFinished(taskResult);
-
+        if (callback != null) {
+            callback.onTaskFinished(taskResult);
         }
     }
 }
