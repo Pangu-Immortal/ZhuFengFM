@@ -3,8 +3,8 @@ package com.zhufengfm.qihao.zhufengfm.tasks.impl;
 import com.longfeisun.app.zhufengfm.TaskConstants;
 import com.longfeisun.app.zhufengfm.clients.ClientDiscoverAPI;
 import com.longfeisun.app.zhufengfm.tasks.BaseTask;
-import com.longfeisun.app.zhufengfm.tasks.TaskCallback;
 import com.longfeisun.app.zhufengfm.tasks.TaskResult;
+import com.zhufengfm.qihao.zhufengfm.SplashActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,7 +15,7 @@ import org.json.JSONObject;
  */
 public class CategoryTagMenuTask extends BaseTask {
 
-    public CategoryTagMenuTask(TaskCallback callback) {
+    public CategoryTagMenuTask(SplashActivity callback) {
         super(callback);
 
     }

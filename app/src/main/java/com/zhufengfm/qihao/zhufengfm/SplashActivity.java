@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Window;
 
-import com.longfeisun.app.zhufengfm.model.CategoryTagMenu;
-import com.longfeisun.app.zhufengfm.parsers.DataParser;
-import com.longfeisun.app.zhufengfm.tasks.TaskCallback;
-import com.longfeisun.app.zhufengfm.tasks.TaskResult;
-import com.longfeisun.app.zhufengfm.tasks.impl.CategoryTagMenuTask;
+import com.zhufengfm.qihao.zhufengfm.model.CategoryTagMenu;
+import com.zhufengfm.qihao.zhufengfm.parsers.DataParser;
+import com.zhufengfm.qihao.zhufengfm.tasks.TaskCallback;
+import com.zhufengfm.qihao.zhufengfm.tasks.TaskResult;
+import com.zhufengfm.qihao.zhufengfm.tasks.impl.CategoryTagMenuTask;
 
 import org.json.JSONObject;
 

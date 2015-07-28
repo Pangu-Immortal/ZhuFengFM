@@ -1,6 +1,6 @@
 package com.zhufengfm.qihao.zhufengfm.parsers;
 
-import com.longfeisun.app.zhufengfm.model.CategoryTagMenu;
+import com.zhufengfm.qihao.zhufengfm.model.CategoryTagMenu;
 
 import org.json.JSONArray;
 import org.json.JSONException;
