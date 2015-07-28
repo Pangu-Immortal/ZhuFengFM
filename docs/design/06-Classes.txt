@@ -1,0 +1,22 @@
+-----------------------------------------
+UI界面
+
+
+SplashActivity 启动扉页
+GuideActivity 教程页
+MainActivity 主界面
+
+
+------------------------------
+网络部分
+
+Client包
+    HttpUtil
+Util包
+    StreamUtil 用于读取IO流
+
+
+
+
+
+

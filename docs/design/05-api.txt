@@ -1,9 +1,13 @@
 
 1. 获取总体分类
 
+用于程序发现界面的分类栏目内部的数据结构
+
 http://mobile.ximalaya.com/m/category_tag_menu
 
 2. 获取推荐页面广告
+
+发现页面 推荐栏目 最下面的广告数据
 
 url: http://www.ximalaya.com/mobile/mall/products?device=android
 
@@ -30,8 +34,18 @@ http://ad.ximalaya.com/adrecord/channel
 	androidId	5404bb826a7e225d
 	device	android
 	deviceId	0
+	参数说明：
+	imsi --TelephonyManager来获取  ---getSystemService(TEL)
+	simSerialNumber --SIM卡的序列号
+	androidId --android序列号
+	device	android
+	deviceId --IMEI TelephonyManager来获取
+	以上获取需要READ_PHONE_STATE 权限
+	返回的结果：{"msg":"成功","ret":1}
 
-5. 启动分页广告
+
+5. 启动扉页的广告
+http://ad.ximalaya.com/ting/loading?version=4.1.7&name=loading&appid=0&device=android
 
 http://ad.ximalaya.com/ting/loading
 	version	4.1.7
@@ -40,7 +54,7 @@ http://ad.ximalaya.com/ting/loading
 	device	android
 
 5. 顶部广告
-
+URL: http://ad.ximalaya.com/ting?version=4.1.7&name=comm_top&appid&0&device=android
 http://ad.ximalaya.com/ting
 	version	4.1.7
 	name	comm_top
@@ -48,36 +62,37 @@ http://ad.ximalaya.com/ting
 	device	android
 
 6. 应用程序默认配置信息
-
+URL: http://mobile.ximalaya.com/mobile/switch/app_set?device=android
 http://mobile.ximalaya.com/mobile/switch/app_set
 	device	android
 
 7. 网络定位当前位置
-
+URL: http://location.ximalaya.com/locationService/location?device=android
 http://location.ximalaya.com/locationService/location
 	device	android
-
-8. 搜索框中的广告信息
-
+{"provinceCode":110000,"provinceName":"北京市","cityId":0,"cityName":""}
+8. 发现部分 推荐分类最下面的广告信息
+URL: http://ad.ximalaya.com/ting?version=4.1.7.1&name=find_banner&device=android
 http://ad.ximalaya.com/ting
-	version	4.1.7.1
+	version	4.1.7
 	name	find_banner
 	device	android
 
 9. 猜你喜欢
-
+URL: http://mobile.ximalaya.com/mobile/discovery/v1/recommend/guessYouLike/unlogin?pageSize=3&pageId=1&device=android
 http://mobile.ximalaya.com/mobile/discovery/v1/recommend/guessYouLike/unlogin
 	pageSize	3
 	pageId	1
 	device	android
 
 10. 发现部分的的栏目
-
+主界面发现模块顶部的TAB信息
+URL: http://mobile.ximalaya.com/mobile/discovery/v1/tabs?device=android
 http://mobile.ximalaya.com/mobile/discovery/v1/tabs
 	device	android
 
 11. 发现部分的推荐
-
+URL: http://mobile.ximalaya.com/mobile/discovery/v1/recommends?version=4.1.7.1&includeActivity=真&includeSpecial=真&device=android&channel=and-f6&scale=2
 http://mobile.ximalaya.com/mobile/discovery/v1/recommends
 	version	4.1.7.1
 	includeActivity	真
@@ -87,7 +102,7 @@ http://mobile.ximalaya.com/mobile/discovery/v1/recommends
 	scale	2
 
 12. 发现部分的分类
-
+URL: http://mobile.ximalaya.com/mobile/discovery/v1/categories?picVersion=10&device=android&scale=2
 http://mobile.ximalaya.com/mobile/discovery/v1/categories
 	picVersion	10
 	device	android
