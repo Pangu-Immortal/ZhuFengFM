@@ -10,7 +10,6 @@ import org.json.JSONObject;
 
 import java.util.LinkedList;
 import java.util.List;
-
 /**
  * 分类与Tag集合，一个分类包含了多个Tag
  */
