@@ -1,9 +1,53 @@
 1. UI 架子
 
-    扉页 -> 引导页 -> AD扉页广告 -> 主界面
-    主界面 -> 底部 Tab，内容 Fragment
-    发现：顶部标题与Tab，内容ViewPager Tab从服务器动态获取。
+   扉页 -> 教程页 -> AD扉页广告 -> 主界面
+
+   主界面 -> 底部Tab，内容 Fragment
+
+   发现: 顶部标题与Tab，内容ViewPager Tab从服务器取回来的。
 
 2. 网络模块
-    1)联网工具类
+
+   1）联网工具类
+
+
+3. 后台的数据请求流程
+
+   1) 定义实体类
+   2) 实体类内部的解析
+   3) 定义异步任务,
+   4) 定义实际的联网操作: url, 参数
+   5) TaskResult.data 返回JSONObject
+   6) 启动异步任务, 编写 TaskCallback的回调
+   7) 收到TaskResult.data, 数据JSON解析，DataParser 实现JSON解析
+   8) DataParser 返回数据对象，采用实体类解析自己的JSON
+   9) 更新数据与UI
+
+4. 发现部分 推荐栏目 的内容分析
+
+   1）推荐使用的接口为 接口11
+   2）返回的JSON格式不是按照顺序排列的，需要根据界面进行排列
+
+      排列顺序：
+
+         焦点图（顶部） －》 focusImages  数据
+
+         小编推荐 －》 editorRecommendAlbums 数据
+
+         精品听单 －》 specialColumn 数据
+
+         发现新奇 －》 discoveryColumns 数据
+
+         热门推荐 －》 hotRecommends 数据  内部包含多个子分类
+
+   3）有些结构是包含了 hasMore 的设置，有的就支持 “更多》”
+   4）内部的结构是不同的
+   5）内容的展示：可以参考的两种实现方式
+      a. 使用 ListView 实现复杂的多布局复用的条目展示；
+      b. 使用 ScrollView 通过代码进行动态的添加。
+
+      确认使用ListView 来实现；
+   6）对于推荐的Adapter，直接传递一个对象，内部包含不同的数据，通过这个对象再来加载ListView
+
+
 

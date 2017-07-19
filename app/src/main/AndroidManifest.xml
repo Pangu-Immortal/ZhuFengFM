@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zhufengfm.qihao.zhufengfm" >
+          package="com.android.zhufeng.fm"
+        >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+            android:name="com.android.zhufeng.fm.MainApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            >
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+                android:name="com.android.zhufeng.fm.MainActivity"
+                android:label="@string/app_name"
+                >
         </activity>
         <activity
-            android:name=".SplashActivity"
-            android:label="@string/title_activity_splash" >
+                android:name="com.android.zhufeng.fm.SplashActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:label="@string/title_activity_splash"
+                android:theme="@style/FullscreenTheme"
+                >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".GuideActivity"
-            android:label="@string/title_activity_guide" >
+                android:name="com.android.zhufeng.fm.GuideActivity"
+                android:label="@string/title_activity_guide"
+                >
+        </activity>
+        <activity
+                android:name="com.android.zhufeng.fm.Test1Activity"
+                android:label="@string/title_activity_test1"
+                >
+        </activity>
+        <activity
+                android:name="com.android.zhufeng.fm.SettingsActivity"
+                android:label="@string/title_activity_settings"
+                >
         </activity>
     </application>
 

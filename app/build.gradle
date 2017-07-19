@@ -1,26 +1,60 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "23.0.0 rc3"
+    signingConfigs {
+        release_sign {
+            keyAlias 'release'
+            keyPassword '123456'
+            storeFile file('../release.keystore')
+            storePassword '123456'
+        }
+    }
+
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
 
     defaultConfig {
-        applicationId "com.zhufengfm.qihao.zhufengfm"
+        applicationId "com.android.zhufeng.fm"
         minSdkVersion 15
-        targetSdkVersion 22
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release_sign
+        }
+    }
+    // 代码检查选项
+    lintOptions {
+        //当发现代码格式错误的时候是否终止 false
+        abortOnError false
+    }
+    //代表当前工程要发布多少套软件包
+    productFlavors {
+        defaultConfig{
+
+        }
+        // 代表一套软件包，这一套也称作发布渠道，
+        // 内部可以定制，包ID，版本号，编译信息，
+        //如果没有指定的字段，则使用 defaultConfig 的内容
+        baidu {
+            applicationId "com.qianfeng.zhufengfm.app.baidu"
+            versionCode 1
+            versionName "1.0"
         }
     }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'com.android.support:support-v4:22.2.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:design:25.3.1'
 }

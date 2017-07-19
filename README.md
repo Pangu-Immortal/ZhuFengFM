@@ -1,2 +1,6 @@
 # ZhuFengFM
-喜马拉雅FM软件
+ZhuFengFM软件
+
+|ZhuFengFM|更新 | 版本 |
+|------------|-----------|--------|
+| ZhuFengFM | Markdown| 1.0.0 |

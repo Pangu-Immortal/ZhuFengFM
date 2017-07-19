@@ -1,43 +1,65 @@
-//////////////////////////////////////////////
+////////////////////////////////
 
 UI 界面
 
-activity 包
 
-    SplashActivity 启动扉页
+SplashActivity 启动扉页
 
-    GuideActivity 教程页
+GuideActivity  教程页
 
-    MainActivity 主界面
+MainActivity   主界面
+
+Fragment 内容
+
+    DiscoverFragment      发现 栏目界面
+
+        子栏目 Fragment
+
+            DiscoverRecommendFragment 推荐子栏目
+
+            DiscoverCategoryFragment  分类子栏目
+
+            DiscoverLiveFragment      直播子栏目
+
+            DiscoverRankingFragment   榜单子栏目
+
+            DiscoverAnchorFragment    主播子栏目
 
 
-////////////////////////////////////////////////
+    CustomFragment        定制听 界面
+
+    DownloadTingFragment  下载听 界面
+
+    ProfileFragment       我  界面
+
+
+////////////////////////////////
 
 网络部分
 
 client 包
 
-    HttpUtil HTTP 请求工具类
+    HttpUtil HTTP请求工具类
 
     ClientDiscoverAPI 程序中 “发现” 栏目的所有接口调用
 
-util 包
 
-    StreamUtil 用于读取 IO 流
+util  包
+
+    StreamUtil  用于读取IO流
 
 tasks 包
 
-    BaseTask 公共的异步任务，提供了公共的方法
+    BaseTask 公共的异步任务，提供公共的方法
 
-    TaskResult 异步任务封装的结果
+    TaskResult  异步任务封装的结果
 
     TaskCallback 异步任务回调接口
 
-    imple 包
+    impl 包
 
         CategoryTagMenuTask 获取 category_tag_menu
 
+////////////////////////////////
 
 
-
-////////////////////////////////////////////////
