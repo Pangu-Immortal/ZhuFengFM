@@ -1,5 +1,7 @@
 package com.android.zhufeng.fm.model.discover;
 
+import android.util.Log;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -13,7 +15,7 @@ public class Sprint {
 
     private int id;
 
-    private int orderNum;
+//    private int orderNum;
 
     private String title;
 
@@ -31,15 +33,29 @@ public class Sprint {
 
     private long contentUpdatedAt;
 
-    private boolean isHot;
-
-    private boolean isExternalUrl;
+//    private boolean isHot;
+//
+//    private boolean isExternalUrl;
 
     public void parseJSON(JSONObject json) throws JSONException {
+        /*
+        {
+    "id": 140,
+    "title": "商城",
+    "subtitle": "特价优惠中",
+    "coverPath": "http://fdfs.xmcdn.com/group7/M08/9C/6E/wKgDWldsp1HwZJRSAABMGZ-IIaY612.jpg",
+    "contentType": "html5.mall",
+    "url": "https://wap.koudaitong.com/v2/showcase/homepage?alias=nq65b1t2",
+    "sharePic": "",
+    "enableShare": false,
+    "isExternalUrl": true,
+    "contentUpdatedAt": 0
+}
+         */
         if (json != null) {
-
+            Log.e("Sprint", json.toString());
             id = json.getInt("id");
-            orderNum = json.getInt("orderNum");
+            //orderNum = json.getInt("orderNum");
             title = json.getString("title");
             subtitle = json.getString("subtitle");
             coverPath = json.getString("coverPath");
@@ -48,17 +64,9 @@ public class Sprint {
             sharePic = json.getString("sharePic");
             enableShare = json.getBoolean("enableShare");
             contentUpdatedAt = json.getLong("contentUpdatedAt");
-            isHot = json.optBoolean("isHot");
-            isExternalUrl = json.optBoolean("isExternalUrl");
+//            isHot = json.optBoolean("isHot");
+//            isExternalUrl = json.optBoolean("isExternalUrl");
         }
-    }
-
-    public boolean isExternalUrl() {
-        return isExternalUrl;
-    }
-
-    public boolean isHot() {
-        return isHot;
     }
 
     public String getContentType() {
@@ -79,10 +87,6 @@ public class Sprint {
 
     public int getId() {
         return id;
-    }
-
-    public int getOrderNum() {
-        return orderNum;
     }
 
     public String getSharePic() {
