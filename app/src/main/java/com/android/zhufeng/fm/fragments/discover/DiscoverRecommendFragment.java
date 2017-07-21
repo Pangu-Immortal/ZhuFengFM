@@ -41,9 +41,7 @@ public class DiscoverRecommendFragment extends Fragment implements AdapterView.O
         ListView listView = (ListView) ret.findViewById(R.id.discover_recommend_list);
 
         if (listView != null) {
-
             // TODO 设置实际数据的 Adapter
-            /////
             adapter = new DiscoverRecommendAdapter(getActivity());
             listView.setAdapter(adapter);
         }
@@ -55,8 +53,7 @@ public class DiscoverRecommendFragment extends Fragment implements AdapterView.O
     public void onResume() {
         super.onResume();
 
-        DiscoverRecommendTask task =
-                new DiscoverRecommendTask(this);
+        DiscoverRecommendTask task = new DiscoverRecommendTask(this);
         task.execute();
     }
 
@@ -68,7 +65,7 @@ public class DiscoverRecommendFragment extends Fragment implements AdapterView.O
             ListView listView = (ListView) parent;
             int headerViewsCount = listView.getHeaderViewsCount();
 
-            // 调整因为 HeaderView导致的偏移
+            // 调整因为 HeaderView 导致的偏移
             position -= headerViewsCount;
 
             int footerViewsCount = listView.getFooterViewsCount();

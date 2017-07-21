@@ -70,7 +70,6 @@ public class DiscoverRecommendAdapter extends BaseAdapter {
                     hotCount = list.size();
                 }
             }
-
             // 3 是 “小编推荐”，“精品听单”，“发现新奇”
             // hotCount 热门推荐的个数
             ret = 3 + hotCount;
@@ -137,7 +136,6 @@ public class DiscoverRecommendAdapter extends BaseAdapter {
         Object item = getItem(position);
 
         int itemViewType = getItemViewType(position);
-
 
         switch (itemViewType) {
             case 0:

@@ -188,11 +188,9 @@ public class DiscoverFragment extends Fragment implements View.OnClickListener, 
                 }
             }
 
-            CommonFragmentPagerAdapter adapter =
-                    new CommonFragmentPagerAdapter(
+            CommonFragmentPagerAdapter adapter = new CommonFragmentPagerAdapter(
                             getChildFragmentManager(),
-                            subFragments
-                    );
+                            subFragments);
             pager.setAdapter(adapter);
 
         }
